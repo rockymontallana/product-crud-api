@@ -66,8 +66,13 @@ You can use [Postman](https://www.postman.com/) or `curl`:
 - **Update Product:** `PUT /products/{id}`
 - **Delete Product:** `DELETE /products/{id}`
 
-Example to create product (replace with your API URL):
+Example curl testing. Make sure application is running
 
 ```bash
-curl -X POST http://localhost:8080/products -H "Content-Type: application/json" -d '{"name":"Apple","quantity":100,"amount":12.50}'
+#Create
+curl -i -X POST http://localhost:8080/products -H 'Content-Type: application/json' -d '{"productName": "Paint","quantity": 50,"amount": 500.00}'
+#Update
+curl -i -X PUT http://localhost:8080/products/1 -H 'Content-Type: application/json' -d '{"productName": "Hollow Blocks","quantity": 150,"amount": 20.00}'
+#Delete
+curl -i -X DELETE http://localhost:8080/products/3
 ```
