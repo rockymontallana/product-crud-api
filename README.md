@@ -53,7 +53,11 @@ spring.jpa.hibernate.ddl-auto=update
 To build and start the app:
 
 ```bash
-./gradlew bootRun
+#Generate the jar
+./gradlew clean build
+#Run the application
+java -jar build/libs/product-crud-api-0.0.1-SNAPSHOT.jar
+
 ```
 
 ### 5. Test the API
